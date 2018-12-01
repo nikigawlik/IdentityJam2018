@@ -8,6 +8,7 @@ public class Orbit : MonoBehaviour {
 	public float minSpeed = 2f;
 	public float maxSpeed = 3f;
 	public float lerpSpeed = 1f;
+	public float angleOffset = 15f;
 
 	private Quaternion currentRotation;
 	private Quaternion deltaRotation;
@@ -18,14 +19,15 @@ public class Orbit : MonoBehaviour {
 			target = transform.parent;
 		}
 
-		currentRotation = Quaternion.Euler(Random.Range(0, 360f),Random.Range(0, 360f),Random.Range(0, 360f));
-		deltaRotation = Quaternion.Euler(Random.Range(minSpeed, maxSpeed) * (Random.Range(0, 2) - .5f) * 2f, 0, 0);
+		currentRotation = Quaternion.Euler(Random.Range(-angleOffset, angleOffset), 0, 0);
+		// deltaRotation = Quaternion.Euler(Random.Range(minSpeed, maxSpeed) * (Random.Range(0, 2) - .5f) * 2f, 0, 0);
+		deltaRotation = Quaternion.Euler(0, Random.Range(minSpeed, maxSpeed), 0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		currentRotation = currentRotation * deltaRotation;
-		Vector3 targetPoint = target.position + currentRotation * Vector3.up * radius;
+		Vector3 targetPoint = target.position + currentRotation * Vector3.right * radius;
 		transform.position = Vector3.Lerp(transform.position, targetPoint, lerpSpeed * Time.deltaTime);
 	}
 }
