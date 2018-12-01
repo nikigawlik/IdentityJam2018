@@ -5,7 +5,7 @@ using UnityEngine;
 public class Orbit : MonoBehaviour {
 	public Transform target;
 	public float radius = 1f;
-	public float minSpeed = 2f;
+		public float minSpeed = 2f;
 	public float maxSpeed = 3f;
 	public float lerpSpeed = 1f;
 

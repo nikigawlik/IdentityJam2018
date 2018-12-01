@@ -22,6 +22,18 @@ public class Collectable : MonoBehaviour {
 
 		cos.AddCollectable(this);
 
-		GameObject.Destroy(io.gameObject);
+		// GameObject.Destroy(io.gameObject);
+		io.enabled = false;
+		Collider col = io.GetComponent<Collider>();
+		col.enabled = false;
+	}
+
+	private void OnEnable() {
+		InteractableObject io = GetComponent<InteractableObject>();
+		if(!io) io = gameObject.AddComponent<InteractableObject>();
+		io.display = this.transform;
+		Collider sc = GetComponent<Collider>();
+		if(!sc) sc = gameObject.AddComponent<SphereCollider>();
+		sc.isTrigger = true;
 	}
 }
