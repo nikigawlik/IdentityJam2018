@@ -313,7 +313,12 @@ Prefab:
     - target: {fileID: 114013220621180596, guid: 063f0449d523d7c4982410dd714f03df,
         type: 2}
       propertyPath: minOrbitRadius
-      value: 2
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114013220621180596, guid: 063f0449d523d7c4982410dd714f03df,
+        type: 2}
+      propertyPath: orbitRadiusIncrease
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 063f0449d523d7c4982410dd714f03df, type: 2}
