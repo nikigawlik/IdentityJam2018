@@ -5,7 +5,7 @@ using UnityEngine;
 public class Orbit : MonoBehaviour {
 	public Transform target;
 	public float radius = 1f;
-		public float minSpeed = 2f;
+	public float minSpeed = 2f;
 	public float maxSpeed = 3f;
 	public float lerpSpeed = 1f;
 
@@ -19,7 +19,7 @@ public class Orbit : MonoBehaviour {
 		}
 
 		currentRotation = Quaternion.Euler(Random.Range(0, 360f),Random.Range(0, 360f),Random.Range(0, 360f));
-		deltaRotation = Quaternion.Euler(Random.Range(minSpeed, maxSpeed) * (Random.Range(0, 2) - 1f), 0, 0);
+		deltaRotation = Quaternion.Euler(Random.Range(minSpeed, maxSpeed) * (Random.Range(0, 2) - .5f) * 2f, 0, 0);
 	}
 	
 	// Update is called once per frame
