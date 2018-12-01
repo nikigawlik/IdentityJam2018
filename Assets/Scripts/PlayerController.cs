@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed = 5f;
 	public float brakeSpeed = 4f;
+	public float verticalBreakSpeed = 1f;
 
 	public CameraController cameraController;
 	public GameObject display;
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour {
 		
 		Rigidbody rb = GetComponent<Rigidbody>();
 		rb.AddForce(input * (moveSpeed + brakeSpeed));
-		rb.AddForce(-rb.velocity * brakeSpeed);
+		rb.AddForce(Vector3.Scale(-rb.velocity, new Vector3(brakeSpeed, verticalBreakSpeed, brakeSpeed)));
 
 		// interaction is handled in the interactible objects ;)
 	}
