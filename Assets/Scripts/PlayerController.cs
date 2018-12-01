@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour {
 		Rigidbody rb = GetComponent<Rigidbody>();
 		rb.AddForce(input * (moveSpeed + brakeSpeed));
 		rb.AddForce(-rb.velocity * brakeSpeed);
+
+		// interaction is handled in the interactible objects ;)
 	}
 
 	private void OnValidate() {
