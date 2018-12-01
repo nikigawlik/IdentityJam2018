@@ -13,7 +13,7 @@ public class Orbit : MonoBehaviour {
 	private Quaternion deltaRotation;
 
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
 		if(target == null) {
 			target = transform.parent;
 		}
