@@ -26,6 +26,13 @@ public class Collectable : MonoBehaviour {
 		io.enabled = false;
 		Collider col = io.GetComponent<Collider>();
 		col.enabled = false;
+        ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+        ParticleSystem.EmissionModule em;
+        em = ps.emission;
+        em.enabled = false;
+
+
+
 	}
 
 	private void OnEnable() {
