@@ -17,6 +17,12 @@ public class InteractableObject : MonoBehaviour {
 	private float scale;
 	private PlayerController currentInteractingPlayer = null;
 
+	private void Start() {
+		if(display == null) {
+			display = transform.parent;
+		}
+	}
+
 	private void Update() {
 		if(currentInteractingPlayer && Input.GetButtonDown(interactionButton)) {
 			OnInteraction.Invoke(currentInteractingPlayer.gameObject);

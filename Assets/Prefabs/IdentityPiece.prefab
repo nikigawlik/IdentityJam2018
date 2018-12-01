@@ -36,7 +36,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4154136338877806}
-  - component: {fileID: 114632867728257022}
   m_Layer: 0
   m_Name: BlueCubeCollectable
   m_TagString: Untagged
@@ -53,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4410028500789562}
   - component: {fileID: 135570941349198886}
-  - component: {fileID: 114831928970637094}
+  - component: {fileID: 114837474764200688}
   m_Layer: 0
   m_Name: IdentityPiece
   m_TagString: Untagged
@@ -144,18 +143,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1222426039104290}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114632867728257022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1543177971928398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 342ecc2556e05b44bae19775ee0ad906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114831928970637094
+--- !u!114 &114837474764200688
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,14 +151,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1782692903409526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab230fce73aa4d9438b910e9c4e693d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 342ecc2556e05b44bae19775ee0ad906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightScale: 1.5
-  highlightDecay: 10
-  highlightBuildup: 15
-  display: {fileID: 4600758823493286}
-  interactionButton: Interact
 --- !u!135 &135570941349198886
 SphereCollider:
   m_ObjectHideFlags: 1
