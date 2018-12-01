@@ -35,7 +35,12 @@ public class CollectionOfStuff : MonoBehaviour {
 			io.enabled = true;
 			Collider col = io.GetComponent<Collider>();
 			col.enabled = true;
-		}
+
+            ParticleSystem ps = dropThis.GetComponentInChildren<ParticleSystem>();
+            ParticleSystem.EmissionModule em;
+            em = ps.emission;
+            em.enabled = true;
+        }
 
 		collectedObjects.Add(c);
 		Orbit orbit = c.gameObject.AddComponent<Orbit>();
